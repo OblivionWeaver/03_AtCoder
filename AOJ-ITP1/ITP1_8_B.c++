@@ -5,16 +5,13 @@ using namespace std;
 
 int main(){
     while(1){
-        string n;
-        cin >> n;
-        if(n=="0"){
-            break;
+        string x;
+        cin >> x;
+        if(x == "0") break;
+        int sum=0;
+        rep(i,x.size()){
+            sum += x[i] - '0';
         }
-        int ans=0;
-        for(int i=0; i<(int)n.length(); i++){
-            ans += n[i]-'0';
-        }
-        cout << ans << endl;
+        cout << sum << endl;
     }
-    return 0;
 }
