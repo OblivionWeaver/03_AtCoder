@@ -6,8 +6,8 @@ using namespace std;
 template<class T> void chmax(T& a,T b){
   if(a<b){
     a=b;
+    }
   }
-}
 
 int main(){
   int n;
@@ -19,11 +19,10 @@ int main(){
   rep(i,n){
     if(i == 0){
       dp[i] = a[i] + b[i];
-    }
+     }
     else{
       dp[i+1] = max(dp[i],a[i]+b[i]);
     }
   }
-  cout << dp[n] <<endl;
-
+  cout << dp[n] << endl;
 }
