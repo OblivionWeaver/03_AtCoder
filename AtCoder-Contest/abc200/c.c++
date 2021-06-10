@@ -5,11 +5,8 @@ using namespace std;
 
 
 int main(){
-    int N;
-    int C[100009],P[100009];
-    
-
-
+    int n;
+    vector<long long> a(n);
+        
 
 }
-
