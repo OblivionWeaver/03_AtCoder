@@ -9,8 +9,8 @@ using namespace std;
 using ll = long long;
 
 int main(){
-    int x,y;
-    cin >> x >> y;
-    cout << y/x << endl;
-
+    int n;
+    cin >> n;
+    if(n<=1) cout << 0 << endl;
+    else cout << n-1 << endl;
 }
