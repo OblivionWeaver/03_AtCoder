@@ -12,17 +12,9 @@ template<class T>bool chmin(T& a, const T& b) { if (b < a) { a = b; return 1; } 
 
 int main(){
     ll h,w;
-    ll out = 0;
-    cin >> h >> w;
-    if(h%2 ==0){
-        out = h*w/2;
-    } 
-    else{
-        if(w%2 ==0){
-            out = h*w/2;
-        }
-        else out = (h*(w/2)+((h/2)+1));
-    }
-
-    cout<< out << endl;
+    cin >> h >>w;
+    ll ans = h*w/2;
+    if((h*w)%2 ==1) ans ++;
+    if(h==1 || w==1) ans = 1;
+    cout << ans << endl;
 }
