@@ -9,11 +9,8 @@ using namespace std;
 using ll = long long;
 
 int main(){
-    char x,y;
-    cin >> x >>y;
-    char Q = max(x,y);
-    if(x>y) cout<< ">" <<endl;
-    else if(x<y) cout<< "<" <<endl;
-    else if(x == y) cout<<"=" <<endl;
+    int n,a,b;
+    cin >> n >> a >> b;
+    cout << min(a*n,b) << endl;
 
 }
