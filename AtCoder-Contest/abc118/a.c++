@@ -11,12 +11,9 @@ template<class T>bool chmax(T& a, const T& b) { if (a < b) { a = b; return 1; } 
 template<class T>bool chmin(T& a, const T& b) { if (b < a) { a = b; return 1; } return 0; }
 
 int main(){
-    string n;
-    cin >> n;
-    rep(i,n.size()){
-        if(n[i] == '1') n[i] = '9';
-        else n[i] ='1';
-    }
-    cout << n << endl;
+    int a,b;
+    cin >> a >> b;
+    if(b%a == 0) cout << a+b << endl;
+    else cout << b-a << endl;
 
 }
