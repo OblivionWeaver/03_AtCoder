@@ -12,11 +12,40 @@ template<class T>bool chmin(T& a, const T& b) { if (b < a) { a = b; return 1; } 
 
 int main(){
     vector<vector<int>> a(3,vector<int>(3));
-    vector<int> b(101);
     rep(i,3)rep(j,3) cin >> a[i][j];
+    vector<vector<bool>> punched(3,vector<bool>(3,false));
     int n;
     cin >> n;
-    rep(i,n) cin >> b[i];
+    rep(i,n){
+        int b;cin >> b;
+        rep(y,3){
+            rep(x,3){
+                if(a[y][x] == b) punched[y][x] = true;
+            }
+        }
+    }
 
+    bool ans = false;
+    rep(y, 3)
+    {
+        int cnt = 0;
+        rep(x, 3) if (punched[y][x]) cnt++;
+        if (cnt == 3)
+            ans = true;
+    }
 
-}
+    rep(x, 3)
+    {
+        int cnt = 0;
+        rep(y, 3) if (punched[y][x]) cnt++;
+        if (cnt == 3)
+            ans = true;
+    }
+
+    if (punched[0][0] && punched[1][1] && punched[2][2])
+        ans = true;
+    if (punched[2][0] && punched[1][1] && punched[0][2])
+        ans = true;
+
+    if(ans) cout << "Yes" << endl;
+    else cout << "No" << endl;
