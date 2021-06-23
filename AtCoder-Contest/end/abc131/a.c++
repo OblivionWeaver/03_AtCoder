@@ -11,9 +11,13 @@ template<class T>bool chmax(T& a, const T& b) { if (a < b) { a = b; return 1; } 
 template<class T>bool chmin(T& a, const T& b) { if (b < a) { a = b; return 1; } return 0; }
 
 int main(){
-    int n;
-    cin >> n;
-    cout << pow(n,3) << endl;
-
+    string s;
+    cin >> s;
+    bool out = false;
+    rep(i,s.size()-1){
+        if(s[i] == s[i+1]) out = true;
+    }
+    if(out) cout << "Bad" << endl;
+    else cout<<"Good" << endl;
 
 }

@@ -12,8 +12,7 @@ template<class T>bool chmin(T& a, const T& b) { if (b < a) { a = b; return 1; } 
 
 int main(){
     int n;
-    cin >> n;
     cout << pow(n,3) << endl;
-
+    
 
 }

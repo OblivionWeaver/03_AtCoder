@@ -11,9 +11,8 @@ template<class T>bool chmax(T& a, const T& b) { if (a < b) { a = b; return 1; } 
 template<class T>bool chmin(T& a, const T& b) { if (b < a) { a = b; return 1; } return 0; }
 
 int main(){
-    int n;
-    cin >> n;
-    cout << pow(n,3) << endl;
-
+    int a, b;
+    cin >> a >> b;
+    cout << max(a+b,max(a-b,a*b)) << endl;
 
 }
