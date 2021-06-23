@@ -10,10 +10,15 @@ using namespace std;
 template<class T>bool chmax(T& a, const T& b) { if (a < b) { a = b; return 1; } return 0; }
 template<class T>bool chmin(T& a, const T& b) { if (b < a) { a = b; return 1; } return 0; }
 
-int main(){
-    int n;
-    cin >> n;
-    cout << pow(n,3) << endl;
-
-
+string S;
+string week[7] = {"SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"};
+//---------------------------------------------------------------------------------------------------
+int  main()
+{
+    cin >> S;
+    rep(i, 7) if (week[i] == S)
+    {
+        int ans = 7 - i;
+        cout << ans << endl;
+    }
 }
